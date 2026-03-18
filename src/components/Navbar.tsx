@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import "./styles/Navbar.css";
+import { withBasePath } from "../utils/assetPath";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
@@ -42,7 +43,11 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
+        <a
+          href={withBasePath("#")}
+          className="navbar-title"
+          data-cursor="disable"
+        >
           UK
         </a>
         <a

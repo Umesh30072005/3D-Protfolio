@@ -2,20 +2,21 @@ import { useState, useCallback } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { withBasePath } from "../utils/assetPath";
 
 const projects = [
   {
     title: "Student Future Planning App",
     category: "Full-Stack Application",
     tools: "Machine Learning, Kotlin, Spring Boot",
-    image: "/images/ai powered studence guidence app.png",
+    image: withBasePath("images/ai powered studence guidence app.png"),
     link: "https://github.com/Umesh30072005/ai-powered-student-suggestion-model",
   },
   {
     title: "AI Powered Machine Downtime Prediction",
     category: "Predictive Maintenance System",
     tools: "Python, Machine Learning, Data Analysis",
-    image: "/images/ai powered model downtime prediction model.png",
+    image: withBasePath("images/ai powered model downtime prediction model.png"),
     link: "https://github.com/tharun-7733/scheduling-maintainence-visits-of-medical-equipment",
   },
 ];
